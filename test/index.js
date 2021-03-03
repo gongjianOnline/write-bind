@@ -9,3 +9,11 @@ const fn1 = function(){
 const newFn1 = fn1.bind2({name:"frank"});
 console.log(newFn1)
 console.assert(newFn1().name === "frank");
+
+const fn2 = function(p1,p2){
+    return [this,p1,p2]
+}
+const newFn2 = fn2.bind2({name:'frank'},123,456);
+console.assert(newFn2()[0].name === 'frank',"this error")
+console.assert(newFn2()[1] === 123,"p1 error")
+console.assert(newFn2()[2] === 456,"p2 error")

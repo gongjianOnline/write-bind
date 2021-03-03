@@ -1,8 +1,8 @@
-function bind(asThis){
+function bind(asThis,...args){
     // this is function 
     const fn = this;
     return function(){
-        return fn.call(asThis)
+        return fn.call(asThis,...args)
     }
 }
 module.exports =  bind;
