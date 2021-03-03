@@ -30,4 +30,4 @@ console.assert(anotherFn2(223,245)[2] === 245,'frank',"p2 error")
 const anotherFn3 = fn2.bind({name:"frank"},123);
 console.assert(anotherFn3(245)[0].name === "frank",'frank',"this error")
 console.assert(anotherFn3(245)[1] === 123,'frank',"p1 error")
-console.assert(anotherFn3(245)[2] === 245,'frank',"p2 error")
+console.assert(anotherFn3(245)[2] === 245,'frank',"p2 error");
