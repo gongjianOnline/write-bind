@@ -21,13 +21,13 @@ console.assert(newFn2()[1] === 123,"p1 error")
 console.assert(newFn2()[2] === 456,"p2 error")
 
 // 先绑定一次this,在绑定一次参数  fn.bind(asThis)(params1)
-const anotherFn2 = fn2.bind({name:"frank"});
-console.assert(anotherFn2(223,245)[0].name === "frank",'frank',"this error")
-console.assert(anotherFn2(223,245)[1] === 223,'frank',"p1 error")
-console.assert(anotherFn2(223,245)[2] === 245,'frank',"p2 error")
+const anotherFn2 = fn2.bind2({name:"frank"});
+console.assert(anotherFn2(223,245)[0].name === "frank",'frank',"this anotherFn2 error")
+console.assert(anotherFn2(223,245)[1] === 223,'frank',"p1 anotherFn2 error")
+console.assert(anotherFn2(223,245)[2] === 245,'frank',"p2 anotherFn2 error")
 
 // 先绑定一次this和参数,在绑定一次参数  fn.bind(asThis,params1)(params2)
-const anotherFn3 = fn2.bind({name:"frank"},123);
-console.assert(anotherFn3(245)[0].name === "frank",'frank',"this error")
-console.assert(anotherFn3(245)[1] === 123,'frank',"p1 error")
-console.assert(anotherFn3(245)[2] === 245,'frank',"p2 error");
+const anotherFn3 = fn2.bind2({name:"frank"},123);
+console.assert(anotherFn3(245)[0].name === "frank",'frank',"this anotherFn3 error")
+console.assert(anotherFn3(245)[1] === 123,'frank',"p1 anotherFn3 error")
+console.assert(anotherFn3(245)[2] === 245,'frank',"p2 anotherFn3 error");
